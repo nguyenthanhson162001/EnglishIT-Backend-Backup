@@ -22,6 +22,6 @@ const Unit = require('..//..//config/mysql/index').getSequlize().define('Unit', 
 }, {
     // Other model options go here
 });
-// Unit.sync({ force: true })
+ Unit.sync({ force: true })
 SequelizeSlugify.slugifyModel(Unit, { source: ['name'] });
 module.exports = Unit;
