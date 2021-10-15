@@ -33,10 +33,4 @@ router.get('/auth0/config', function(req, res) {
     })
 })
 
-
-
-
-
-
-
 module.exports = router;

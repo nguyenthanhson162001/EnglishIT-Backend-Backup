@@ -32,6 +32,7 @@
         "http": "0.0.1-security",
         "jwks-rsa": "^2.0.4",
         "mysql2": "^2.3.0",
+        "nginx": "^1.0.3",
         "node-fetch": "^3.0.0",
         "nodemon": "^2.0.12",
         "read-excel-file": "^5.2.9",
