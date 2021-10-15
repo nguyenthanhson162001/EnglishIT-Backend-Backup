@@ -38,5 +38,10 @@ const Vocabulary = require('../../config/mysql/index').getSequlize().define('Voc
 
 });
 
+<<<<<<< HEAD
 // Vocabulary.sync({ force: true })
 module.exports = Vocabulary;
+=======
+ Vocabulary.sync({ force: true })
+module.exports = Vocabulary;
+>>>>>>> 9e477b7d9b1bc77ff63b55ae3ecefdd709e3f550

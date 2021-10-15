@@ -18,5 +18,5 @@ const typeVocabulary = require('../../config/mysql/index').getSequlize().define(
     timestamps: false
 });
 
-// typeVocabulary.sync({ force: true })
+ typeVocabulary.sync({ force: true })
 module.exports = typeVocabulary;

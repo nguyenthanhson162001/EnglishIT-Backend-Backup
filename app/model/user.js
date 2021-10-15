@@ -24,5 +24,5 @@ const User = require('../../config/mysql/index').getSequlize().define('User', {
 }, {
     // Other model options go here
 });
-// User.sync({ force: true })
+ User.sync({ force: true })
 module.exports = User;

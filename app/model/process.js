@@ -15,5 +15,5 @@ const Process = require('..//..//config/mysql/index').getSequlize().define('Proc
 }, {
     timestamps: false
 });
-// Process.sync({ force: true })
+Process.sync({ force: true })
 module.exports = Process;
