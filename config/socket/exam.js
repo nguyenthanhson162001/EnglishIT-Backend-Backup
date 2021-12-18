@@ -24,7 +24,9 @@ function exam(app) {
                 Unit.findOne({ where: { slug: unitSlug } }),
                 Process.findOne({ where: { slug: processSlug } })
             ])
-            console.log(process, processSlug)
+
+
+
             if (!user || !unit || !process) {
                 client.emit('error', {
                     message: 'user or unti or process incorrect'
@@ -53,7 +55,7 @@ function exam(app) {
             sendQuestion()
         });
         client.on('check-answer', (answer) => {
-            console.log(answer)
+            // console.log(answer)
             client.emit('server-result-check-answer', { result: examControl.isAnswer(answer) })
         });
 

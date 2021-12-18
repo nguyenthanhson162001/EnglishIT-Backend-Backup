@@ -32,5 +32,5 @@ const Exam = require('../../config/mysql/index').getSequlize().define('Exam', {
         }
     }
 });
- Exam.sync({ force: true })
+Exam.sync({ force: true })
 module.exports = Exam;

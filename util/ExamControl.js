@@ -94,17 +94,17 @@ class ExamControl {
         return this.vocabularies.length;
     }
     printAllQuestion() {
-        console.log(this.userID, this.processID, this.unitID);
+        // console.log(this.userID, this.processID, this.unitID);
         let result = this.vocabularies.map(vocabulary => {
             return {
                 English: vocabulary.english,
                 VietName: vocabulary.vietnamese
             }
         });
-        console.table(result);
+        // console.table(result);
     }
     isFinish() {
-        console.log(this.indexQuestion, this.sumTotalQuestion)
+        // console.log(this.indexQuestion, this.sumTotalQuestion)
         if (this.indexQuestion >= this.sumTotalQuestion) {
             this.save()
             return true;

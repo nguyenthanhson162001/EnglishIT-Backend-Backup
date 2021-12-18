@@ -10,7 +10,8 @@ const { auth, requiresAuth } = require("express-openid-connect");
 const got = require("got");
 const Vocabulary = require('./app/model/vocabulary')
 require('./config/mysql')
-
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencode
 const server = require('./config/socket/exam')(app)
 
 
