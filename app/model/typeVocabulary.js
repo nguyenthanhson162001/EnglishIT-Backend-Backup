@@ -7,7 +7,7 @@ const typeVocabulary = require('../../config/mysql/index').getSequlize().define(
         allowNull: false
     },
     NameVietnamese: {
-        type: DataTypes.STRING,
+        type: 'NVARCHAR(255)',
         allowNull: false
     },
     Abbreviation: {
@@ -15,8 +15,10 @@ const typeVocabulary = require('../../config/mysql/index').getSequlize().define(
         allowNull: true
     }
 }, {
+    charset: 'utf8',
+    collate: 'utf8_unicode_ci',
     timestamps: false
 });
 
-typeVocabulary.sync({ force: true })
+// typeVocabulary.sync({ alter: true })
 module.exports = typeVocabulary;

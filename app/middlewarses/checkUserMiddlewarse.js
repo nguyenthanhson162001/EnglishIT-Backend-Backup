@@ -13,7 +13,6 @@ module.exports = function(req, res, next) {
             }
         })
         .then(async function(response) {
-
             const [user, created] = await User.findOrCreate({
                 where: { codeSupplied: response.data.sub.split('|')[1] },
                 defaults: {

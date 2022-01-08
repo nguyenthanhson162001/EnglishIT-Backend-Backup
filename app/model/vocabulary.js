@@ -9,11 +9,11 @@ const Vocabulary = require('../../config/mysql/index').getSequlize().define('Voc
         allowNull: false
     },
     vietnamese: {
-        type: DataTypes.TEXT,
+        type: 'NVARCHAR(255)',
         allowNull: false
     },
     spelling: {
-        type: DataTypes.STRING,
+        type: 'NVARCHAR(255)',
     },
     unit_id: {
         type: DataTypes.INTEGER,
@@ -34,10 +34,11 @@ const Vocabulary = require('../../config/mysql/index').getSequlize().define('Voc
         }
     }
 }, {
-    timestamps: false
-
+    timestamps: false,
+    charset: 'utf8',
+    collate: 'utf8_unicode_ci',
 });
 
-Vocabulary.sync({ force: true })
+// Vocabulary.sync({ alert: true })
 module.exports = Vocabulary;
 // Vocabulary.sync({ force: true })

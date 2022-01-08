@@ -11,9 +11,14 @@ const Process = require('..//..//config/mysql/index').getSequlize().define('Proc
     },
     description: {
         type: DataTypes.TEXT
+    },
+    slug: {
+        type: DataTypes.STRING,
+        unique: true
     }
 }, {
     timestamps: false
 });
-Process.sync({ force: true })
+SequelizeSlugify.slugifyModel(Process, { source: ['name'] });
+// Process.sync({ alter: true })
 module.exports = Process;

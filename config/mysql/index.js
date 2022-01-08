@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('english_it_ver2', 'root', '162001', {
-    host: 'localhost',
+const sequelize = new Sequelize('english_it', 'root', 'Son@162001', {
+    host: '18.139.222.164',
     dialect: 'mysql' /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
 })
 sequelize
