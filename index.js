@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config()
+var morgan = require('morgan') // show log
 
 
 const routes = require('./routes');
@@ -13,7 +14,7 @@ require('./config/mysql')
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencode
 const server = require('./config/socket/exam')(app)
-
+app.use(morgan('combined'))
 
 var corsOptions = {
     origin: process.env.URL_CLIENT,
